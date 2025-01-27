@@ -1,9 +1,12 @@
 # region imports
-from Die import #JES MISSING CODE
+from Die import rollFairDie, rollUnFairDie #JES MISSING CODE #done
 # endregion
-
 # region functions
 def rollDice(N=1):
+    total_score = 0
+    for i in range(N):
+        total_score += rollFairDie()
+        return total_score
     """
     This function simulates rolling N dice simultaneously by using a loop that rolls
     a single die N times and totaling the score.
